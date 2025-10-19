@@ -1,0 +1,45 @@
+# MANIFEST.in para o pacote BIANCA
+# Inclui arquivos adicionais no pacote distribuído
+
+# Incluir arquivos de documentação
+include README.md
+include LICENSE
+include requirements.txt
+
+# Incluir arquivos de configuração
+include pyproject.toml
+include setup.py
+
+# Incluir arquivos de teste (se existirem)
+recursive-include tests *.py
+recursive-include tests *.txt
+recursive-include tests *.md
+
+# Incluir exemplos (se existirem)
+recursive-include examples *.py
+recursive-include examples *.txt
+recursive-include examples *.md
+
+# Incluir arquivos específicos do módulo bianca
+recursive-include bianca *.txt
+recursive-include bianca *.md
+
+# Excluir arquivos desnecessários
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.pyd
+global-exclude __pycache__
+global-exclude *.so
+global-exclude .DS_Store
+global-exclude .git*
+global-exclude .vscode
+global-exclude .idea
+global-exclude *.egg-info
+global-exclude .pytest_cache
+global-exclude .coverage
+global-exclude htmlcov
+global-exclude .tox
+global-exclude .venv
+global-exclude venv
+global-exclude env
+

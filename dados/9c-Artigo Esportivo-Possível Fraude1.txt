@@ -1,0 +1,11 @@
+Recomendação:
+
+Com base na análise da transação ID: 9c, a qual foi identificada como uma possível fraude, recomenda-se a seguinte ação:
+
+1. Acionar o setor Anti-Fraude: Devido ao status de "Possível Fraude", é crucial que o setor Anti-Fraude seja notificado imediatamente para uma investigação mais aprofundada. Eles devem analisar o comportamento de compra anterior do cliente, a localização da transação e comparar com as atividades normais do cliente.
+
+2. Realizar Verificação Manual: Paralelamente, uma verificação manual da transação deve ser realizada para confirmar a suspeita de fraude. Isso deve incluir a revisão de detalhes da transação, como o tipo de produto comprado, o valor da transação e o horário da transação.
+
+3. Notificar Cliente: Após a confirmação da fraude pela equipe Anti-Fraude e/ou pela verificação manual, o cliente deve ser notificado sobre a atividade suspeita em sua conta. Isso permitirá que o cliente tome as medidas necessárias para proteger sua conta.
+
+Classificação de Fraude: Com base nos detalhes disponíveis, esta transação pode ser classificada como "Fraude de Cartão de Crédito". No entanto, a classificação final deve ser confirmada após a investigação do setor Anti-Fraude.

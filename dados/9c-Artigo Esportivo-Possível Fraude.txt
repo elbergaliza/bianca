@@ -1,0 +1,9 @@
+Recomendação: 
+
+Considerando o status da transação como "Possível Fraude", recomenda-se acionar imediatamente o setor Anti-Fraude para uma investigação mais aprofundada. A transação deve ser analisada em detalhes, incluindo o padrão de gastos do titular do cartão, a localização da transação e a comparação com as transações anteriores. 
+
+Além disso, é aconselhável notificar o cliente sobre a situação atual e solicitar informações adicionais, se necessário, para ajudar na investigação. 
+
+Classificação de Fraude: 
+
+Com base nas informações disponíveis, a fraude pode ser classificada como "Fraude de Cartão de Crédito". No entanto, a classificação final deve ser confirmada após a investigação completa pelo setor Anti-Fraude.
