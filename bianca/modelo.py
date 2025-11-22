@@ -8,7 +8,7 @@ Este modulo gerencia um modelo específico de IA.
 # específicas de cada modelo de IA.
 
 from openai import OpenAI  # Adiciona importação de OpenAI no escopo correto
-from bianca.parametros import ParametrosIA
+from .parametros import ParametrosIA
 
 
 class ModeloIA:

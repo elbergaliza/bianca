@@ -22,9 +22,9 @@ Exemplo de uso:
     modelos = params.listar_modelos_disponiveis()
 """
 
-__version__ = "1.0.0"
-__author__ = "BIANCA Team"
-__email__ = "bianca@example.com"
+__version__ = "1.0.1"
+__author__ = "Elber Galiza"
+__email__ = "elbergaliza@duck.com"
 __description__ = "Biblioteca de Inteligência Artificial para Novos Componentes e Aplicações"
 
 # Importações principais para facilitar o uso
@@ -162,7 +162,7 @@ def main():
         print(f"  {status_text} {dep}")
 
     print("\n" + "=" * 60)
-    print("Para mais informações, consulte: https://github.com/your-username/bianca-ai")
+    print("Para mais informações, consulte: https://github.com/elbergaliza/bianca")
     print("=" * 60)
 
 

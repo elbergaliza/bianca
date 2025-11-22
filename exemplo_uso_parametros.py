@@ -4,6 +4,7 @@ Demonstra as principais funcionalidades implementadas
 """
 
 from bianca.parametros import obter_parametros
+from bianca.calcular_tokens import CalculadoraTokens
 
 try:
     import tiktoken
@@ -16,6 +17,7 @@ except ImportError:
 def main():
     # Obtém a instância de parâmetros
     parametros = obter_parametros()
+    calculadora = CalculadoraTokens()
 
     print("=== BIANCA - Módulo de Parâmetros de IA ===\n")
 
@@ -48,7 +50,7 @@ def main():
 
             tokens_saida = 50  # Estimativa de resposta
 
-            custo = parametros.calcular_custo(
+            custo = calculadora.calcular_custo(
                 nome_modelo, tokens_entrada, tokens_saida)
             print(f"   {nome_modelo}:")
             print(f"     Tokens entrada: {tokens_entrada}")
@@ -62,7 +64,7 @@ def main():
     print("3. Verificação de limites:")
     tokens_teste = 10000
     for nome_modelo in ['gpt-4', 'gpt-3.5-turbo']:
-        dentro_limite = parametros.verificar_limite_tokens(
+        dentro_limite = calculadora.verificar_limite_tokens(
             nome_modelo, tokens_teste)
         print(
             f"   {nome_modelo}: {tokens_teste} tokens {'✓' if dentro_limite else '✗'}")
@@ -118,9 +120,9 @@ def main():
     print(f"   Tokens saída estimados: {tokens_resposta}")
 
     for modelo in ['gpt-4', 'gpt-3.5-turbo']:
-        custo = parametros.calcular_custo(
+        custo = calculadora.calcular_custo(
             modelo, tokens_prompt, tokens_resposta)
-        dentro_limite = parametros.verificar_limite_tokens(
+        dentro_limite = calculadora.verificar_limite_tokens(
             modelo, tokens_prompt, tokens_resposta)
         print(
             f"   {modelo}: Custo ${custo:.6f}, Limite {'✓' if dentro_limite else '✗'}")
@@ -128,7 +130,7 @@ def main():
     # 9. Demonstração de tratamento de erros
     print("\n9. Tratamento de erros:")
     try:
-        parametros.calcular_custo('modelo-inexistente', 100, 50)
+        calculadora.calcular_custo('modelo-inexistente', 100, 50)
     except ValueError as e:
         print(f"   Erro capturado: {e}")
 

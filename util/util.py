@@ -87,28 +87,3 @@ def salvar_arquivo(
             f"Erro ao salvar o arquivo '{caminho_arquivo}'."
         )
         raise e
-
-
-# Mantém nome antigo para compatibilidade com código existente
-def salvando_arquivo(arquivo_produto: str, dados_arquivo: str) -> None:
-    """
-    DEPRECATED: Use salvar_arquivo() no lugar desta função.
-
-    Salva dados em um arquivo de texto.
-    Esta função está mantida apenas para compatibilidade com código legado.
-
-    Args:
-        arquivo_produto: Caminho do arquivo a ser salvo
-        dados_arquivo: Conteúdo a ser gravado no arquivo
-
-    Raises:
-        Exception: Qualquer erro durante a operação de salvamento
-    """
-    try:
-        with open(arquivo_produto, "w", encoding="utf-8") as f:
-            f.write(dados_arquivo)
-    except Exception as e:
-        e.add_note(
-            f"Problemas ao salvar o arquivo '{arquivo_produto}'."
-        )
-        raise e

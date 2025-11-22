@@ -14,9 +14,19 @@ FUNCIONALIDADES INCLUÍDAS:
 Integrado com parametros.py para configurações dos modelos.
 """
 
-import tiktoken
 from typing import Dict, List, Optional, Tuple, Any
-from bianca.parametros import obter_parametros
+from .parametros import obter_parametros
+
+try:
+    import tiktoken
+    TIKTOKEN_AVAILABLE = True
+except ImportError:
+    TIKTOKEN_AVAILABLE = False
+    # Fallback para quando tiktoken não estiver disponível
+
+    def _fallback_encode(text: str) -> int:
+        """Fallback simples para contagem de tokens"""
+        return len(text.split()) * 2  # Estimativa aproximada
 
 
 class CalculadoraTokens:
@@ -36,6 +46,10 @@ class CalculadoraTokens:
         Returns:
             Número de tokens
         """
+        if not TIKTOKEN_AVAILABLE:
+            # Usar fallback quando tiktoken não estiver disponível
+            return _fallback_encode(texto)
+
         try:
             codificador = tiktoken.encoding_for_model(modelo)
             return len(codificador.encode(texto))

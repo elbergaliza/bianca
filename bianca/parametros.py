@@ -32,6 +32,7 @@ except ImportError as e:
     print("Erro ao carregar o arquivo .env")
     raise e
     # Se dotenv não estiver disponível, continua sem carregar
+    # O usuário pode definir as variáveis de ambiente manualmente
     pass
 
 
@@ -52,8 +53,8 @@ class ParametrosIA:
 
     def __init__(self):
         self.chave_api = os.getenv('OPENAI_API_KEY', '')
-        if not self.chave_api:
-            raise ValueError("A chave da API não está preenchida")
+        # Não exigir chave da API na inicialização para permitir importação do módulo
+        # A validação será feita quando necessário
         self.modelo = None  # Modelo atualmente selecionado
         self.tempo_espera_padrao = 30  # segundos
         self.temperatura_padrao = 0.7
